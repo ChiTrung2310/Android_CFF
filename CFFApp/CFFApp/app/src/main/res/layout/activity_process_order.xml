@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProcessOrder">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <View
+            android:id="@+id/viewProfile"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/current"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <TextView
+            android:id="@+id/textThongTin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin giao hàng"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewProfile"
+            app:layout_constraintVertical_bias="0" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:background="@drawable/current"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/viewViTri"
+            app:layout_constraintStart_toEndOf="@+id/viewProfile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.11" />
+
+        <View
+            android:id="@+id/viewViTri"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/current"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toEndOf="@+id/viewProfile"
+            app:layout_constraintTop_toTopOf="@+id/viewProfile"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/textViTri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ giao hàng"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/textThongTin"
+            app:layout_constraintTop_toBottomOf="@+id/viewViTri"
+            app:layout_constraintVertical_bias="0" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:background="@drawable/current"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/viewXacNhan"
+            app:layout_constraintStart_toEndOf="@+id/viewViTri"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.11" />
+
+        <View
+            android:id="@+id/viewXacNhan"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/current"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.633"
+            app:layout_constraintStart_toEndOf="@+id/viewViTri"
+            app:layout_constraintTop_toTopOf="@+id/viewViTri"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textXacNhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toEndOf="@+id/textViTri"
+            app:layout_constraintTop_toBottomOf="@+id/viewXacNhan"
+            app:layout_constraintVertical_bias="0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/constraintLayout3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:background="@drawable/view_bg"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHeight_percent=".78"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="1">-->
+
+<!--        <androidx.viewpager2.widget.ViewPager2-->
+<!--            android:id="@+id/view_page_process"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHeight_percent=".7"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        app:navGraph="@navigation/nav_order" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

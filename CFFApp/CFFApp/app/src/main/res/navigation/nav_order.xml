@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_order"
+    app:startDestination="@id/profileProcessOrder">
+    <fragment
+        android:id="@+id/profileProcessOrder"
+        android:name="com.example.cffapp.ProfileProcessOrder"
+        android:label="ProfileProcessOrder"
+        tools:layout="@layout/profile_order_fragment"
+        >
+        <action
+            android:id="@+id/action_profileProcessOrder_to_diaChiProcessOrder2"
+            app:destination="@id/diaChiProcessOrder2" />
+    </fragment>
+    <fragment
+        android:id="@+id/diaChiProcessOrder2"
+        android:name="com.example.cffapp.DiaChiProcessOrder"
+        android:label="DiaChiProcessOrder"
+        tools:layout="@layout/map_processorder_fragment">
+        <action
+            android:id="@+id/action_diaChiProcessOrder2_to_xacNhanDonHang"
+            app:destination="@id/xacNhanDonHang" />
+    </fragment>
+    <fragment
+        android:id="@+id/xacNhanDonHang"
+        android:name="com.example.cffapp.XacNhanDonHang"
+        android:label="fragment_xac_nhan_don_hang"
+        tools:layout="@layout/fragment_xac_nhan_don_hang" />
+</navigation>

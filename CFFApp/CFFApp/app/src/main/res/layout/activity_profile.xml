@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:padding="20dp"
+            android:background="#FF5252">
+            <ImageView
+                android:id="@+id/profile_img"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logo_login"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tenL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bungee"
+                android:text="Chicken Fast Food"
+                android:includeFontPadding="false"
+                android:textSize="20dp"
+                android:layout_toRightOf="@+id/profile_img"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:id="@+id/return_profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/left_arrow" />
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/logout" />
+
+            <ImageView
+                android:id="@+id/edit_profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/logout"
+                android:src="@drawable/edit_1" />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="-100dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/khuyenmai"
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#AD1457"
+            android:layout_margin="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+                <ImageView
+                    android:src="@drawable/sale"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:id="@+id/payment_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="Khuyến mãi của bạn"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/bungee"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Họ và tên"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/user_pro"
+                android:drawablePadding="10dp"
+                android:text="Chicken Fast Food"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="10dp"
+                android:text="cff@gmail.com"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Số điện thoại "
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_phonenume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/phone_pro"
+                android:drawablePadding="10dp"
+                android:text="(+84)v1234567"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mật khẩu"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/pass_pro"
+                android:drawablePadding="10dp"
+                android:text="Ho1Cc"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:background="@drawable/button_bg"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

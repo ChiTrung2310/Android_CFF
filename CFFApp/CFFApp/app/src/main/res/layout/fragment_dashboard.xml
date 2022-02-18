@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".DashboardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/profile_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/notify"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/tingtong_icon"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profile" />
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/chango"
+            android:text="CFF"
+            android:textColor="#E53935"
+            android:textSize="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notify"
+            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/notify"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:paddingLeft="20dp"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:elevation="4dp"
+            android:background="@drawable/search_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent=".7"
+            android:layout_marginTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/search_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/voice"
+            app:layout_constraintStart_toEndOf="@+id/search_bar"
+            app:layout_constraintTop_toTopOf="@+id/search_bar"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/voice"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/microphone"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/search_bar"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:id="@+id/rv_1"
+            android:layout_height="130dp"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_2"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_basket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:elevation="35dp"
+            android:src="@drawable/basket"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
